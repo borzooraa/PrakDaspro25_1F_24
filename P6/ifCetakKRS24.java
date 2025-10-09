@@ -9,16 +9,10 @@ public class ifCetakKRS24 {
     System.out.println("--- Cetak KRS SIAKAD ---");
     System.out.print ("Apakah UKT sudah lunas? (true/false): ");
     boolean uktLunas = Kiyah.nextBoolean();
+    String output;
 
-    if (uktLunas) {
-        System.out.println("Pembayaran UKT terverivikasi");
-        System.out.println("Silakan cetak KRS dan minta tanda tangan DPA");
-    }
-    else{
-      System.out.println("Registrasi ditolak. Silakan lunasi UKT terlebih dahulu");
-    
-    }
+    System.out.print(output = (uktLunas) ? "Pembayaran UKT terverivikasi \nSilakan cetak KRS dan minta tanda tangan DPA" : "Registrasi ditolak. Silakan lunasi UKT terlebih dahulu");
 
-  
+
     }
 }

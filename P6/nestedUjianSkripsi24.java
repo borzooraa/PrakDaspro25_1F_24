@@ -6,7 +6,7 @@ public class nestedUjianSkripsi24 {
     public static void main(String[] args) {
         Scanner Kiyah = new Scanner (System.in);
         String pesan;
-        System.out.print("Apakah mahasiswa sudah bebas kompe? (Ya/Tidak): ");
+        System.out.print("Apakah mahasiswa sudah bebas kompen? (Ya/Tidak): ");
         String bebasKompen = Kiyah.nextLine();
 
         System.out.print("Masukkan jumlah log bimbingan Pembimbing 1: ");
