@@ -2,9 +2,7 @@ package P6;
 
 import java.util.Scanner;
 
-import javax.sound.sampled.SourceDataLine;
-
-public class ifCetakKRSNoPresensi {
+public class ifCetakKRS24 {
     public static void main(String[] args) {
       Scanner Kiyah = new Scanner (System.in);
     
