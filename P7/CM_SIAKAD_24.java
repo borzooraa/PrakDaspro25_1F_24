@@ -1,10 +1,10 @@
-package P6;
+package P7;
 
 import java.util.Scanner;
 
 import javax.swing.plaf.nimbus.NimbusLookAndFeel;
 
-public class P724 {
+public class CM_SIAKAD_24 {
     public static void main(String[] args) {
         Scanner Kiyah = new Scanner(System.in);
         String nilaiS, nama, nim, huruf1, huruf2, huruf3, statusSem; // huruf(1,2,3)=pancasila, daspro, bing
