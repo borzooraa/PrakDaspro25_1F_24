@@ -7,7 +7,7 @@ import javax.swing.plaf.nimbus.NimbusLookAndFeel;
 public class CM_SIAKAD_24 {
     public static void main(String[] args) {
         Scanner Kiyah = new Scanner(System.in);
-        String nilaiS, nama, nim, huruf1, huruf2, huruf3, statusSem; // huruf(1,2,3)=pancasila, daspro, bing
+        String nama, nim, huruf1, huruf2, huruf3, statusSem, statusSem2; // huruf(1,2,3)=pancasila, daspro, bing
         int sks1 = 2, sks2 = 3, sks3 = 2, totSKS = sks1 + sks2 + sks3;
         double setara1, setara2, setara3, ip;
 
@@ -105,9 +105,13 @@ public class CM_SIAKAD_24 {
                 statusSem = "TIDAK LULUS SEMESTER (NILAI PANCASILA D)";
             } else if (huruf2 == "E" || huruf3 == "E") {
                 statusSem = "TIDAK LULUS SEMESTER (NILAI ADA YANG E)";
+
             } else {
                 statusSem = "LULUS SEMESTER";
             }
+                  
+
+       
 
             System.out.print("====================================================");
             System.out.print("\n           HASIL KONVERSI NILAI MAHASISWA        ");
@@ -137,6 +141,8 @@ public class CM_SIAKAD_24 {
             System.out.println("Total Bobot: " + ((sks1 * setara1) + (sks2 * setara2) + (sks3 * setara3)));
             System.out.println("Indeks Prestasi (IP): " + ip);
             System.out.println("Status Semester: " + statusSem);
+                    
+
         }
 
     }
