@@ -9,17 +9,19 @@ public class siakadWhile24 {
 
         System.out.print("Masukkan jumlah mahasiswa: ");
         cMahasiswa = Kiyah.nextInt();
-
+        
         while (i < cMahasiswa) {
+            
             System.out.print("\nMasukkan nilai mahasiswa ke-"+(i+1)+": ");
             nilai = Kiyah.nextInt();
-
+            
             if (nilai < 0 || nilai > 100){
                 System.out.print("Nilai tidak valid. Masukkan lagi nilai yang valid!");
                 continue;
             }
             if (nilai > 80 && nilai <= 100){
                 System.out.print("Nilai mahaiswa ke-" + (i+1)+" adalah A");
+                System.out.print("\nBagus, pertahankan nilainya!");
             }else if (nilai > 73 && nilai <= 80){
                 System.out.print("Nilai mahasiswa ke-"+ (i+1)+" adalah B+");
             }else if (nilai > 65 && nilai <= 73){
