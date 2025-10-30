@@ -8,7 +8,7 @@ public class star24 {
         System.out.print("Masukkan nilai n = ");
         int n = Kiyah.nextInt();
 
-        for (int i = 1; i > n; i++) {
+        for (int i = 1; i <= n; i+=2) {
             System.out.print("*");
             
         }
