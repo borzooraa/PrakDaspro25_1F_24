@@ -18,7 +18,7 @@ public class nilaiKelompok24 {
                         totNilai+=nilai;
                     }
                     rataNilai=totNilai/5;
-                    System.out.println("Kelompok 5: nilai rata-rata= "+rataNilai);
+                    System.out.println("Kelompok "+i+ ": nilai rata-rata " +rataNilai);
                     i++;
         }
     }
