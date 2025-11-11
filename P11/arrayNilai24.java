@@ -7,7 +7,7 @@ public class arrayNilai24 {
         Scanner Kiyah = new Scanner(System.in);
         int [] nilaiAkhir = new int[10];
 
-        for (int i = 0; i < 10; i++) {
+        for (int i = 0; i < nilaiAkhir.length; i++) {
             System.out.print("Masukkan nilai akhir ke-"+i+" : ");
             nilaiAkhir[i]=Kiyah.nextInt();
         } for (int i = 0; i < 10; i++) {
