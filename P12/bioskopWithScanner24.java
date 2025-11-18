@@ -18,30 +18,52 @@ public class bioskopWithScanner24 {
 
             if (pilih.equals("1")) {
                 System.out.print("Masukkan nama: ");
-                nama=Kiyah.nextLine();
-                System.out.print("Masukkan baris (1-4): ");
-                baris= Kiyah.nextInt();
-                System.out.print("Masukkan kolom (1-2): ");
-                kolom= Kiyah.nextInt();
-                Kiyah.nextLine();
+                nama = Kiyah.nextLine();
+
+                while (true) {
+                    System.out.print("Masukkan baris (1-4): ");
+                    baris = Kiyah.nextInt();
+                    if (baris < 1 || baris > penonton.length) {
+                        System.out.println("Baris tidak tersedia. Coba lagi.");
+                        continue;
+                    }else{
+                        break;
+                }
+            }
+                while (true) {
+                    
+                    System.out.print("Masukkan kolom (1-2): ");
+                    kolom = Kiyah.nextInt();
+                    Kiyah.nextLine();
     
-                penonton[baris-1][kolom-1]=nama;
-                System.out.println("Data tersimpan");
-            }else if (pilih.equals("2")){
+                    if (kolom < 1 || kolom > penonton[0].length) {
+                        System.out.println("Kolom tidak tersedia. Coba lagi.");
+                        continue;
+                    }else{
+                        break;
+                    }
+                }
+            
+                penonton[baris - 1][kolom - 1] = nama;
+                System.out.println("Data tersimpan");    
+        } 
+             else if (pilih.equals("2")) {
                 System.out.println("\n=== DAFTAR PENONTON ===");
                 for (int i = 0; i < penonton.length; i++) {
-                    System.out.print("Baris ke-"+(i+1)+ ": ");
+                    System.out.print("Baris ke-" + (i + 1) + ": ");
                     for (int j = 0; j < penonton[i].length; j++) {
-                        System.out.print(penonton[i][j]+ (j == penonton[i].length - 1 ? "" : ", "));
+                        System.out.print(penonton[i][j] + (j == penonton[i].length - 1 ? "" : ", "));
                     }
-                    Kiyah.nextLine();
+                    System.out.println();
                 }
-            }else if (pilih.equals("3")) {
+            } else if (pilih.equals("3")) {
                 System.out.println("Keluar dari menu");
                 break;
-            }else {
+            } else {
                 System.out.println("Menu tidak valid");
             }
         }
     }
 }
+
+
