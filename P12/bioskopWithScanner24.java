@@ -24,30 +24,27 @@ public class bioskopWithScanner24 {
                     System.out.print("Masukkan baris (1-4): ");
                     baris = Kiyah.nextInt();
                     if (baris < 1 || baris > penonton.length) {
-                        System.out.println("Baris tidak tersedia. Coba lagi.");
+                        System.out.println("Baris tidak tersedia. Coba");
                         continue;
-                    }else{
-                        break;
-                }
-            }
-                while (true) {
-                    
+                    }
+
                     System.out.print("Masukkan kolom (1-2): ");
                     kolom = Kiyah.nextInt();
                     Kiyah.nextLine();
-    
+
                     if (kolom < 1 || kolom > penonton[0].length) {
                         System.out.println("Kolom tidak tersedia. Coba lagi.");
                         continue;
-                    }else{
-                        break;
                     }
+                    if (penonton[baris - 1][kolom - 1] != null) {
+                        System.out.println("Kursi sudah terisi. Silakan pilih baris dan kolom lain.");
+                        continue;
+                    }
+                    break;
                 }
-            
                 penonton[baris - 1][kolom - 1] = nama;
-                System.out.println("Data tersimpan");    
-        } 
-             else if (pilih.equals("2")) {
+                System.out.println("Data tersimpan");
+            } else if (pilih.equals("2")) {
                 System.out.println("\n=== DAFTAR PENONTON ===");
                 for (int i = 0; i < penonton.length; i++) {
                     System.out.print("Baris ke-" + (i + 1) + ": ");
@@ -65,5 +62,3 @@ public class bioskopWithScanner24 {
         }
     }
 }
-
-
