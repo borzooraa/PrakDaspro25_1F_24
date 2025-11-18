@@ -44,12 +44,14 @@ public class bioskopWithScanner24 {
                 }
                 penonton[baris - 1][kolom - 1] = nama;
                 System.out.println("Data tersimpan");
+
             } else if (pilih.equals("2")) {
                 System.out.println("\n=== DAFTAR PENONTON ===");
                 for (int i = 0; i < penonton.length; i++) {
                     System.out.print("Baris ke-" + (i + 1) + ": ");
                     for (int j = 0; j < penonton[i].length; j++) {
-                        System.out.print(penonton[i][j] + (j == penonton[i].length - 1 ? "" : ", "));
+                        String isi = (penonton[i][j] == null) ? "***" : penonton[i][j];
+                        System.out.print(isi + (j == penonton[i].length - 1 ? "" : ", "));
                     }
                     System.out.println();
                 }
