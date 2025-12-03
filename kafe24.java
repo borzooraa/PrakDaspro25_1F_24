@@ -1,9 +1,13 @@
 public class kafe24 {
-    public static void Menu(String namaPel, boolean isMem){
+    public static void Menu(String namaPel, boolean isMem, String kodePromo){
         System.out.println("Selamat datang, "+namaPel+"!");
 
         if (isMem){
             System.out.println("Anda adalah member, dapatkan diskon 10% untuk setiap pembelian!");
+        } if (kodePromo.equalsIgnoreCase("DISKON50")){
+            System.out.println("Selamat, anda mendapatkan diskon 50%!");
+        }else if (kodePromo.equalsIgnoreCase("Diskon30")) {
+            System.out.println("Selamat, anda mendapatkan diskon 30%!");
         }
 
         System.out.println("===== MENU RESTO KAFE =====");
@@ -16,6 +20,7 @@ public class kafe24 {
         System.out.println("===========================");
         System.out.println("Silahkan pilih menu yang anda inginkan");
     } public static void main(String[] args) {
-        Menu("Andi", true);
+        Menu("Andi", true,"diskon50");
+        
     }
 }
