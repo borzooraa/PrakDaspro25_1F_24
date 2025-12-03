@@ -47,9 +47,9 @@ public class rekapPenjualanCafe24 {
     static void penjualanTertinggi() {
         int menuTertinggi = 0;
         int tertinggi = 0;
-        for (int i = 0; i < menu.length; i++) {
+        for (int i = 0; i < penjualan.length; i++) {
             int totalPen = 0;
-            for (int j = 0; j < menu.length; j++) {
+            for (int j = 0; j < penjualan[i].length; j++) {
                 totalPen += penjualan[i][j];
             }
             if (totalPen > tertinggi) {
