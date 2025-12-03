@@ -72,6 +72,16 @@ public class rekapPenjualanCafe24 {
     }
 
     public static void main(String[] args) {
+        System.out.print("Masukkan jumlah menu: ");
+        menu = new String[Kiyah.nextInt()];
+        Kiyah.nextLine();
+        for (int i = 0; i < menu.length; i++) {
+            System.out.print("- Nama menu ke-" + (i + 1) + ": ");
+            menu[i] = Kiyah.nextLine();
+        }
+        System.out.print("Masukkan jumlah hari: ");
+        penjualan = new int[menu.length][Kiyah.nextInt()];
+
         input();
         tampilPenjualan();
         penjualanTertinggi();
