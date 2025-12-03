@@ -20,37 +20,42 @@ public class kafe24 {
         System.out.println("===========================");
     }
 
-    public static double hitungTotHrg24(int pilihanMenu, int banyakItem, String kodePromo) {
+    public static double hitungTotHrg24(int pilihanMenu, int banyakItem) {
         int[] hrgItems = { 15000, 20000, 22000, 12000, 10000, 18000 };
-        double diskon;
         double hargaTotal = hrgItems[pilihanMenu - 1] * banyakItem;
-        if (kodePromo.equalsIgnoreCase("DISKON50")) {
-            System.out.println("Selamat, anda mendapatkan diskon 50%!");
-            diskon=hargaTotal*0.5;
-            hargaTotal-=diskon;
-        } else if (kodePromo.equalsIgnoreCase("Diskon30")) {
-            System.out.println("Selamat, anda mendapatkan diskon 30%!");
-            diskon=hargaTotal*0.3;
-            hargaTotal-=diskon;
-        } else {
-            System.out.println("Kode invalid");
-        }
-    
+
         return hargaTotal;
     }
 
     public static void main(String[] args) {
         Menu("Andi", true);
         int pilMenu, totItems;
-        double totalBayar;
-        System.out.print("Silakan pilih menu yang anda inginkan: ");
-        pilMenu = Kiyah.nextInt();
-        System.out.print("Jumlah item: ");
-        totItems = Kiyah.nextInt();
+        double totalBayar = 0;
+        String lagi;
+        double diskon;
+        do {
+            System.out.print("Silakan pilih menu yang anda inginkan: ");
+            pilMenu = Kiyah.nextInt();
+            System.out.print("Jumlah item: ");
+            totItems = Kiyah.nextInt();
+            totalBayar += hitungTotHrg24(pilMenu, totItems);
+            System.out.println("Apakah ada menu lain yang ingin di pesan? (y/n)");
+            Kiyah.nextLine();
+            lagi = Kiyah.nextLine();
+        } while (lagi.equalsIgnoreCase("y"));
         System.out.print("Silakan maskkan kode promo anda: ");
-        Kiyah.nextLine();
-        String kodPromo=Kiyah.nextLine();
-        totalBayar = hitungTotHrg24(pilMenu, totItems,kodPromo);
+        String kodPromo = Kiyah.nextLine();
+        if (kodPromo.equalsIgnoreCase("DISKON50")) {
+            System.out.println("Selamat, anda mendapatkan diskon 50%!");
+            diskon = totalBayar * 0.5;
+            totalBayar -= diskon;
+        } else if (kodPromo.equalsIgnoreCase("Diskon30")) {
+            System.out.println("Selamat, anda mendapatkan diskon 30%!");
+            diskon = totalBayar * 0.3;
+            totalBayar -= diskon;
+        } else {
+            System.out.println("Kode invalid");
+        }
         System.out.println("Total yang harus dibayarkan: " + totalBayar);
     }
 }
